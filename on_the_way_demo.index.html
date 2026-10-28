@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ml">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102b2a">
+<title>On The Way | Alappuzha</title>
+<style>
+:root{--green:#126b5c;--dark:#102b2a;--mint:#e4f5ef;--bg:#f4f7f8;--ink:#152326;--muted:#647477;--line:#dfe8e8;--white:#fff;--amber:#f4bc4b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Malayalam",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:11px 14px;font-weight:750}.primary{background:var(--green);color:white}.secondary{background:var(--mint);color:var(--green)}.danger{background:#ffeded;color:#9a2525}.muted{color:var(--muted);font-size:13px;line-height:1.6}
+header{background:linear-gradient(130deg,#102b2a,#176b5d);color:white;padding:16px 0 26px}.wrap{width:min(1100px,100% - 28px);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:900;font-size:21px;letter-spacing:-.4px}.brand span{color:var(--amber)}.nav button{background:#ffffff18;color:white;border:1px solid #ffffff40;padding:9px 12px;font-size:13px}.hero{padding:27px 0 12px}.eyebrow{font-size:12px;letter-spacing:1px;color:#bce5d9;font-weight:800}.hero h1{font-size:clamp(29px,6vw,48px);line-height:1.15;margin:10px 0}.hero p{color:#d6e9e5;max-width:650px;line-height:1.7;margin:0}.search{display:flex;gap:8px;margin-top:18px}.search input{flex:1;min-width:0}
+input,textarea,select{width:100%;border:1px solid var(--line);border-radius:11px;padding:11px 12px;background:white;color:var(--ink)}label{display:block;font-size:13px;font-weight:750;margin:0 0 5px}.field{margin:10px 0}
+main{padding:20px 0 44px}.notice{padding:12px 14px;background:#fff7df;border:1px solid #f0dfa5;border-radius:13px;font-size:13px;line-height:1.65;color:#654d12;margin-bottom:18px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:20px 0 12px}.section-head h2{font-size:20px;margin:0}.categories{display:flex;gap:8px;overflow:auto;padding-bottom:5px}.cat{white-space:nowrap;background:white;border:1px solid var(--line);color:var(--ink)}.cat.active{background:var(--green);color:white}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product{border:1px solid var(--line);border-radius:16px;background:white;overflow:hidden;display:flex;flex-direction:column}.product-icon{height:112px;background:linear-gradient(135deg,#e3f4ef,#f5f8fa);display:grid;place-items:center;font-size:47px}.product-body{padding:12px;display:flex;flex-direction:column;gap:7px;flex:1}.product h3{font-size:15px;margin:0}.product small{color:var(--muted)}.price{font-size:19px;font-weight:900}.product button{margin-top:auto}
+.layout{display:grid;grid-template-columns:1fr;gap:15px}.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:15px;min-width:0}.panel h2{margin:0 0 12px;font-size:20px}.cartline,.orderline{padding:11px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;font-size:14px}.qty{display:flex;align-items:center;gap:6px}.qty button{padding:4px 9px;background:var(--mint);color:var(--green)}.total{display:flex;justify-content:space-between;padding:14px 0;font-size:18px;font-weight:850}.full{width:100%}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.tab{background:#e9efef;color:var(--ink)}.tab.active{background:var(--dark);color:white}.admin-only{display:none}.admin-banner{background:#e9f4ff;color:#204c73;padding:12px;border-radius:12px;font-size:13px;line-height:1.6;margin-bottom:12px}.admin-product{border:1px solid var(--line);padding:10px;border-radius:12px;margin:8px 0;display:flex;justify-content:space-between;gap:10px;align-items:center}.status{font-size:12px;border-radius:99px;background:#fff2ce;padding:5px 8px;display:inline-block}.empty{font-size:14px;color:var(--muted);padding:10px 0}.footer{text-align:center;color:var(--muted);font-size:12px;padding:20px 0}.hidden{display:none!important}
+@media(min-width:650px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.layout{grid-template-columns:1.1fr .9fr}.product-icon{height:130px}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style></head>
+<body>
+<header><div class="wrap">
+  <div class="nav"><div class="brand">🛵 On The <span>Way</span></div><button onclick="showSupport()">WhatsApp Support</button></div>
+  <div class="hero"><div class="eyebrow">ALAPPUZHA • LOCAL DELIVERY</div><h1>നിങ്ങൾക്ക് വേണ്ട സാധനങ്ങൾ,<br>വീട്ടുപടിക്കൽ.</h1><p>മൊബൈൽ ആക്സസറീസ്, ഇലക്ട്രോണിക്സ്, ചെറിയ ഹോം അപ്ലയൻസുകൾ — സാധനങ്ങളുടെ ലഭ്യതയും ഡെലിവറി സമയവും സ്ഥിരീകരിച്ച ശേഷം ഓർഡർ എത്തിക്കും.</p>
+  <div class="search"><input id="search" placeholder="സാധനം തിരയുക…"><button class="secondary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">തിരയുക</button></div></div>
+</div></header>
+<main class="wrap">
+<div class="notice"><strong>ഇപ്പോൾ ഡെമോ പതിപ്പാണ്.</strong> ഉൽപ്പന്നങ്ങളുടെ പേരും വിലയും ഉദാഹരണങ്ങളാണ്. ഈ ഫയലിലെ അഡ്മിൻ സൗകര്യം ഈ ബ്രൗസറിൽ മാത്രം ഡെമോ ആയി പ്രവർത്തിക്കും; യഥാർത്ഥ ഉപഭോക്താക്കളുടെ ഓർഡറുകൾ എല്ലാ ഫോണുകളിലും ഒരുമിച്ച് കാണാൻ ഓൺലൈൻ ഡാറ്റാബേസ് സജ്ജീകരിക്കണം.</div>
+<section id="customerView">
+<div class="section-head"><h2>വിഭാഗങ്ങൾ</h2><span class="muted">നിങ്ങൾക്ക് വേണ്ടത് തിരഞ്ഞെടുക്കൂ</span></div>
+<div class="categories" id="categories"><button class="cat active" data-cat="എല്ലാം">എല്ലാം</button><button class="cat" data-cat="മൊബൈൽ ആക്സസറീസ്">മൊബൈൽ ആക്സസറീസ്</button><button class="cat" data-cat="ഇലക്ട്രോണിക്സ്">ഇലക്ട്രോണിക്സ്</button><button class="cat" data-cat="ഹോം അപ്ലയൻസസ്">ഹോം അപ്ലയൻസസ്</button></div>
+<div class="layout"><section id="products"><div class="section-head"><h2>സാധനങ്ങൾ</h2><span class="muted" id="count"></span></div><div class="grid" id="productGrid"></div></section>
+<aside class="panel" id="checkout"><h2>🛒 നിങ്ങളുടെ ഓർഡർ</h2><div id="cartItems" class="empty">സാധനങ്ങൾ കാർട്ടിൽ ചേർക്കുക.</div><div class="total"><span>ആകെ</span><span id="total">₹0</span></div>
+<div class="field"><label for="customer">പേര് *</label><input id="customer" placeholder="നിങ്ങളുടെ പേര്" autocomplete="name"></div>
+<div class="field"><label for="phone">മൊബൈൽ നമ്പർ *</label><input id="phone" placeholder="10 അക്ക നമ്പർ" inputmode="tel" autocomplete="tel"></div>
+<div class="field"><label for="address">ഡെലിവറി വിലാസം *</label><textarea id="address" rows="2" placeholder="വീട്ടുപേര്, സ്ഥലം, പിൻകോഡ്"></textarea></div>
+<div class="field"><label for="area">പ്രദേശം</label><select id="area"><option>ആലപ്പുഴ ടൗൺ</option><option>മുല്ലയ്ക്കൽ</option><option>ബീച്ച് റോഡ്</option><option>അമ്പലപ്പുഴ</option><option>ചേർത്തല</option><option>മറ്റൊരു പ്രദേശം</option></select></div>
+<button class="primary full" onclick="sendOrder()">WhatsApp വഴി ഓർഡർ അയയ്ക്കുക</button><p class="muted">വില, സ്റ്റോക്ക്, ഡെലിവറി സമയം എന്നിവ കടയുമായി സ്ഥിരീകരിക്കും. ഇപ്പോൾ ഓൺലൈൻ പേയ്മെന്റ് ഇല്ല.</p>
+</aside></div></section>
+<section id="adminView" class="hidden">
+<div class="section-head"><h2>Admin Panel</h2><span class="muted">On The Way</span></div>
+<div class="admin-banner"><strong>ഡെമോ അഡ്മിൻ പാനൽ:</strong> ഇപ്പോൾ ഈ ബ്രൗസറിൽ മാത്രം ഉൽപ്പന്നങ്ങളും ഓർഡറുകളും സൂക്ഷിക്കും. ഇത് സുരക്ഷിതമായ ഓൺലൈൻ അഡ്മിൻ പാനലോ shared database-ഓ അല്ല. ലൈവ് ചെയ്യുന്നതിന് മുമ്പ് authentication, database, access rules എന്നിവ ചേർക്കണം.</div>
+<div class="tabs"><button class="tab active" onclick="adminTab('orders',this)">ഓർഡറുകൾ</button><button class="tab" onclick="adminTab('products',this)">Products ചേർക്കുക</button><button class="tab" onclick="adminTab('settings',this)">സജ്ജീകരണം</button></div>
+<div id="adminOrders" class="panel"><h2>ലഭിച്ച ഡെമോ ഓർഡറുകൾ</h2><div id="ordersList" class="empty">ഇതുവരെ ഓർഡറുകളില്ല. WhatsApp ഓർഡർ അയയ്ക്കുന്നത് ഈ ലിസ്റ്റിലേക്ക് സ്വയം വരില്ല.</div></div>
+<div id="adminProducts" class="panel hidden"><h2>പുതിയ Product ചേർക്കുക</h2>
+<div class="field"><label>Product പേര്</label><input id="newName" placeholder="ഉദാ: USB കേബിൾ"></div>
+<div class="field"><label>വില (₹)</label><input id="newPrice" type="number" min="1" placeholder="199"></div>
+<div class="field"><label>വിഭാഗം</label><select id="newCat"><option>മൊബൈൽ ആക്സസറീസ്</option><option>ഇലക്ട്രോണിക്സ്</option><option>ഹോം അപ്ലയൻസസ്</option></select></div>
+<div class="field"><label>ഐക്കൺ (emoji)</label><input id="newEmoji" placeholder="📱" value="📦"></div>
+<button class="primary" onclick="addProduct()">Product ചേർക്കുക</button><div class="section-head"><h2>നിലവിലുള്ള Products</h2></div><div id="adminProductList"></div></div>
+<div id="adminSettings" class="panel hidden"><h2>സജ്ജീകരണം</h2><p class="muted">ബിസിനസ് WhatsApp നമ്പർ: <strong>7034925148</strong></p><p class="muted">ഓൺലൈൻ ഓർഡറുകൾ എല്ലാ ഉപകരണങ്ങളിലും കാണാൻ Supabase പോലുള്ള shared database-ും സുരക്ഷിത admin login-ും ചേർക്കേണ്ടതുണ്ട്. ഈ ഡെമോയിൽ ഉപഭോക്തൃ ഡാറ്റ സെർവറിലേക്ക് അപ്‌ലോഡ് ചെയ്യുന്നില്ല.</p><button class="secondary" onclick="showSupport()">WhatsApp തുറക്കുക</button></div>
+</section>
+<div class="footer">On The Way • Alappuzha • Demo version</div>
+</main>
+<script>
+const WA_NUMBER="917034925148";
+let products=[
+{id:1,name:"USB ചാർജിംഗ് കേബിൾ",cat:"മൊബൈൽ ആക്സസറീസ്",price:199,emoji:"🔌"},
+{id:2,name:"മൊബൈൽ ചാർജർ",cat:"മൊബൈൽ ആക്സസറീസ്",price:399,emoji:"🔋"},
+{id:3,name:"വയർഡ് ഇയർഫോൺ",cat:"മൊബൈൽ ആക്സസറീസ്",price:249,emoji:"🎧"},
+{id:4,name:"മൊബൈൽ കവർ",cat:"മൊബൈൽ ആക്സസറീസ്",price:199,emoji:"📱"},
+{id:5,name:"ബ്ലൂടൂത്ത് സ്പീക്കർ",cat:"ഇലക്ട്രോണിക്സ്",price:999,emoji:"🔊"},
+{id:6,name:"സ്മാർട്ട് വാച്ച്",cat:"ഇലക്ട്രോണിക്സ്",price:1499,emoji:"⌚"},
+{id:7,name:"ഇലക്ട്രിക് കെറ്റിൽ",cat:"ഹോം അപ്ലയൻസസ്",price:899,emoji:"☕"},
+{id:8,name:"ടേബിൾ ഫാൻ",cat:"ഹോം അപ്ലയൻസസ്",price:1299,emoji:"🌀"}];
+let cart={},activeCat="എല്ലാം",demoOrders=[];
+const money=n=>"₹"+Number(n).toLocaleString("en-IN");
+function renderProducts(){let q=document.getElementById("search").value.trim().toLowerCase();let list=products.filter(p=>(activeCat==="എല്ലാം"||p.cat===activeCat)&&(p.name.toLowerCase().includes(q)||p.cat.toLowerCase().includes(q)));document.getElementById("count").textContent=list.length+" സാധനങ്ങൾ";document.getElementById("productGrid").innerHTML=list.map(p=>`<article class="product"><div class="product-icon">${p.emoji||"📦"}</div><div class="product-body"><small>${p.cat}</small><h3>${p.name}</h3><div class="price">${money(p.price)}</div><button class="primary" onclick="addCart(${p.id})">+ കാർട്ടിൽ ചേർക്കുക</button></div></article>`).join("")||'<div class="empty">സാധനങ്ങൾ കണ്ടെത്താനായില്ല.</div>'}
+function addCart(id){cart[id]=(cart[id]||0)+1;renderCart()}
+function qty(id,d){cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];renderCart()}
+function renderCart(){let list=products.filter(p=>cart[p.id]);document.getElementById("cartItems").innerHTML=list.length?list.map(p=>`<div class="cartline"><div>${p.name}<br><strong>${money(p.price*cart[p.id])}</strong></div><div class="qty"><button onclick="qty(${p.id},-1)">−</button><span>${cart[p.id]}</span><button onclick="qty(${p.id},1)">+</button></div></div>`).join(""):'<div class="empty">സാധനങ്ങൾ കാർട്ടിൽ ചേർക്കുക.</div>';document.getElementById("total").textContent=money(list.reduce((s,p)=>s+p.price*cart[p.id],0))}
+function sendOrder(){let list=products.filter(p=>cart[p.id]),name=document.getElementById("customer").value.trim(),phone=document.getElementById("phone").value.trim(),address=document.getElementById("address").value.trim(),area=document.getElementById("area").value;if(!list.length)return alert("ആദ്യം ഒരു സാധനം കാർട്ടിൽ ചേർക്കുക.");if(!name||!phone||!address)return alert("പേര്, ഫോൺ നമ്പർ, വിലാസം എന്നിവ നൽകുക.");if(!/^[0-9+\-\s]{10,15}$/.test(phone))return alert("ശരിയായ മൊബൈൽ നമ്പർ നൽകുക.");let total=list.reduce((s,p)=>s+p.price*cart[p.id],0);let msg=["🛵 ON THE WAY — പുതിയ ഓർഡർ","",`പേര്: ${name}`,`ഫോൺ: ${phone}`,`വിലാസം: ${address}`,`പ്രദേശം: ${area}`,"","സാധനങ്ങൾ:",...list.map(p=>`${p.name} × ${cart[p.id]} = ${money(p.price*cart[p.id])}`),"",`ആകെ: ${money(total)}`,"ദയവായി വില/സ്റ്റോക്ക്/ഡെലിവറി സമയം സ്ഥിരീകരിക്കുക."].join("\n");window.open("https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(msg),"_blank")}
+function showSupport(){window.open("https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent("നമസ്കാരം On The Way, എനിക്ക് സഹായം വേണം."),"_blank")}
+function adminTab(which,btn){document.querySelectorAll(".tabs .tab").forEach(x=>x.classList.remove("active"));btn.classList.add("active");["orders","products","settings"].forEach(k=>document.getElementById("admin"+k[0].toUpperCase()+k.slice(1)).classList.toggle("hidden",k!==which))}
+function addProduct(){let name=document.getElementById("newName").value.trim(),price=Number(document.getElementById("newPrice").value),cat=document.getElementById("newCat").value,emoji=document.getElementById("newEmoji").value.trim()||"📦";if(!name||!Number.isFinite(price)||price<=0)return alert("Product പേരും ശരിയായ വിലയും നൽകുക.");products.push({id:Date.now(),name,price,cat,emoji});document.getElementById("newName").value="";document.getElementById("newPrice").value="";renderProducts();renderAdminProducts();alert("ഡെമോ Product ചേർത്തു. ഇത് ഈ ബ്രൗസറിൽ മാത്രം നിലനിൽക്കും.")}
+function renderAdminProducts(){document.getElementById("adminProductList").innerHTML=products.map(p=>`<div class="admin-product"><div>${p.emoji} <strong>${p.name}</strong><br><span class="muted">${p.cat} • ${money(p.price)}</span></div><button class="danger" onclick="deleteProduct(${p.id})">നീക്കുക</button></div>`).join("")}
+function deleteProduct(id){products=products.filter(p=>p.id!==id);delete cart[id];renderProducts();renderCart();renderAdminProducts()}
+document.getElementById("search").addEventListener("input",renderProducts);
+document.querySelectorAll(".cat").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".cat").forEach(x=>x.classList.remove("active"));b.classList.add("active");activeCat=b.dataset.cat;renderProducts()}));
+/* Demo admin switch: tap the brand logo five times quickly. This is not authentication/security. */
+let taps=0,timer;document.querySelector(".brand").addEventListener("click",()=>{taps++;clearTimeout(timer);timer=setTimeout(()=>taps=0,1600);if(taps>=5){taps=0;let isAdmin=!document.getElementById("adminView").classList.contains("hidden");document.getElementById("adminView").classList.toggle("hidden",isAdmin);document.getElementById("customerView").classList.toggle("hidden",!isAdmin);if(!isAdmin)renderAdminProducts();window.scrollTo({top:0,behavior:"smooth"})}});
+renderProducts();renderCart();renderAdminProducts();
+</script></body></html>
